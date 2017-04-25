@@ -1,0 +1,492 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19752,        484]
+NotebookOptionsPosition[     19441,        468]
+NotebookOutlinePosition[     19775,        483]
+CellTagsIndexPosition[     19732,        480]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", 
+   RowBox[{
+   "legos", ",", "moving", ",", "movingLego", ",", "legoPositions", ",", 
+    "obj", ",", "objTmp"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"initMousePos", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", 
+     RowBox[{"-", "1"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dimPianoX", " ", "=", " ", "20"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dimPianoY", " ", "=", " ", "12"}], ";"}], "\[IndentingNewLine]", 
+  " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "numero", " ", "di", " ", "lego", " ", "inserite", " ", "nel", " ", 
+    "piano"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nLegos", " ", "=", " ", "7"}], ";"}], "\[IndentingNewLine]", " ", 
+  
+  RowBox[{"(*", 
+   RowBox[{"dimensioni", " ", "lego", " ", "inserite"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"legos", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"2", ",", "8"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "4"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "2"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", " ", 
+  RowBox[{"(*", 
+   RowBox[{"posizioni", " ", "delle", " ", "lego", " ", "sul", " ", "piano"}],
+    "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"legoPositions", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"5", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "7"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"9", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"8", ",", "2"}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"colori", " ", "delle", " ", "lego"}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{
+   "TODO", " ", "fissa", " ", "il", " ", "colore", " ", "per", " ", 
+    "dimensione"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"legoColors", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+     "Blue", ",", "Green", ",", "Red", " ", ",", "Yellow", ",", "Cyan", ",", 
+      "Brown", ",", "Orange"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"si", " ", "sta", " ", "spostando", " ", "una", " ", 
+    RowBox[{"lego", "?"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"moving", " ", "=", " ", "False"}], ";"}], "\[IndentingNewLine]", 
+  " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "identificativo", " ", "della", " ", "lego", " ", "che", " ", "viene", " ",
+     "spostata"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"movingLego", " ", "=", " ", 
+    RowBox[{"-", "1"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"lista", " ", "di", " ", "oggetti", " ", "da", " ", "disegnare"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"obj", " ", "=", " ", 
+    RowBox[{"getRectangles", "[", 
+     RowBox[{"legoPositions", ",", "legos"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "funzione", " ", "che", " ", "restituisce", " ", "le", " ", "informazioni",
+     " ", "per", " ", "disegnare"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"getRectangles", "[", 
+    RowBox[{"legoPositions_", ",", "legos_"}], "]"}], " ", ":=", 
+   RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"objTmp", " ", "=", " ", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+      "scorro", " ", "lego", " ", "per", " ", "lego", " ", "e", " ", 
+       "recupero", " ", "le", " ", "info", " ", "per", " ", "disegnare", " ", 
+       "i", " ", "rettangoli"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", " ", 
+       RowBox[{"i", "<=", "nLegos"}], ",", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"angoloInferiore", " ", "=", " ", 
+         RowBox[{"Part", "[", 
+          RowBox[{"legoPositions", ",", "i"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"dimensioneLego", " ", "=", " ", 
+         RowBox[{"Part", "[", 
+          RowBox[{"legos", ",", "i"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"angoloSuperiore", " ", "=", " ", 
+         RowBox[{"angoloInferiore", " ", "+", " ", "dimensioneLego"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"testo", " ", "=", " ", 
+         RowBox[{
+          RowBox[{"dimensioneLego", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "*", 
+          RowBox[{
+           RowBox[{"dimensioneLego", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "/", "16"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"objTmp", ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"legoColors", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], ",", 
+            RowBox[{"EdgeForm", "[", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"Thick", ",", "Black"}], "]"}], "]"}], ",", 
+            RowBox[{"Rectangle", "[", 
+             RowBox[{"angoloInferiore", ",", "angoloSuperiore"}], "]"}], ",", 
+            
+            RowBox[{"Text", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{"testo", ",", "Black", ",", "Bold"}], "]"}], ",", 
+              RowBox[{"angoloInferiore", "+", " ", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"dimensioneLego", "[", 
+                   RowBox[{"[", "1", "]"}], "]"}], "/", "2"}], ",", 
+                 RowBox[{
+                  RowBox[{"dimensioneLego", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "/", "2"}]}], "}"}]}]}], 
+             "]"}]}], "}"}]}], "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+      "ritorno", " ", "la", " ", "lista", " ", "di", " ", "rettangoli"}], 
+      "*)"}], "\[IndentingNewLine]", "objTmp"}], " ", "\[IndentingNewLine]", 
+    ")"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Funzione", " ", "che", " ", "disegna", " ", "i", " ", "rettangoli"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"legosPrint", "[", "obj_", "]"}], " ", ":=", " ", 
+   RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{"Graphics", "[", 
+     RowBox[{
+      RowBox[{"{", "obj", "}"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "dimPianoX"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "dimPianoY"}], "}"}]}], "}"}]}], ",", 
+      RowBox[{"ImageSize", "\[Rule]", "800"}], ",", 
+      RowBox[{"Background", "\[Rule]", "White"}], ",", 
+      RowBox[{"GridLines", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Range", "[", 
+          RowBox[{"0", ",", "dimPianoX", ",", "1"}], "]"}], ",", 
+         RowBox[{"Range", "[", 
+          RowBox[{"0", ",", "dimPianoY", ",", "1"}], "]"}]}], "}"}]}]}], 
+     "]"}], "\[IndentingNewLine]", ")"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Pane", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"DynamicModule", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"EventHandler", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"legosPrint", "[", 
+        RowBox[{"Dynamic", "@", "obj"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"evento", " ", "mouse", " ", "cliccato"}], ",", " ", 
+          RowBox[{
+          "controlla", " ", "se", " ", "\[EGrave]", " ", "presente", " ", 
+           "un", " ", "blocchetto", " ", "lego", " ", "sotto", " ", "il", " ",
+            "click"}]}], "*)"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\"\<MouseDown\>\"", "\[RuleDelayed]", 
+          RowBox[{"(", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"recupero", " ", "coordinate", " ", "mouse"}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"initMousePos", "=", 
+             RowBox[{"MousePosition", "[", "\"\<Graphics\>\"", "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"xMouse", "=", 
+             RowBox[{"initMousePos", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"yMouse", "=", 
+             RowBox[{"initMousePos", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"For", "[", 
+             RowBox[{
+              RowBox[{"i", "=", "1"}], ",", 
+              RowBox[{"i", "<=", "nLegos"}], ",", 
+              RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"If", "[", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"xMouse", ">=", 
+                  RowBox[{"legoPositions", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "&&", " ", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"xMouse", " ", "<=", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"legos", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}], "+", 
+                    RowBox[{"legoPositions", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}]}], ")"}]}], " ", "&&",
+                  "\[IndentingNewLine]", 
+                 RowBox[{"yMouse", " ", ">=", 
+                  RowBox[{"legoPositions", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "2"}], "]"}], "]"}]}], "&&", " ", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"yMouse", "<=", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"legos", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "2"}], "]"}], "]"}], " ", "+", 
+                    RowBox[{"legoPositions", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ")"}]}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"moving", " ", "=", " ", "True"}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"movingLego", " ", "=", " ", "i"}]}]}], 
+               "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}],
+            "\[IndentingNewLine]", ")"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"evento", " ", "mouse", " ", "rilasciato"}], ",", " ", 
+           RowBox[{"ferma", " ", "il", " ", "movimento"}]}], "*)"}], 
+         "\[IndentingNewLine]", 
+         RowBox[{"\"\<MouseUp\>\"", "\[RuleDelayed]", 
+          RowBox[{"(", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"moving", " ", "=", " ", "False"}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"movingLego", " ", "=", " ", 
+             RowBox[{"-", "1"}]}], ";"}], "\[IndentingNewLine]", ")"}]}], ",",
+          "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"evento", " ", "mouse", " ", "trascinato"}], ",", " ", 
+           RowBox[{
+           "sposta", " ", "il", " ", "blocchetto", " ", "selezionato"}]}], 
+          "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"\"\<MouseDragged\>\"", " ", "\[RuleDelayed]", " ", 
+          RowBox[{"(", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"recupero", " ", "coordinate", " ", "mouse"}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"initMousePos", "=", 
+             RowBox[{"MousePosition", "[", "\"\<Graphics\>\"", "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"xMouse", "=", 
+             RowBox[{"initMousePos", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"yMouse", "=", 
+             RowBox[{"initMousePos", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"(*", 
+             RowBox[{
+             "TODO", " ", "non", " ", "permettere", " ", "uscita", " ", "dal",
+               " ", "piano"}], "*)"}], "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"xMouse", "\[GreaterEqual]", "0"}], " ", "&&", 
+               RowBox[{"xMouse", "\[LessEqual]", "dimPianoX"}], " ", "&&", 
+               " ", 
+               RowBox[{"yMouse", "\[GreaterEqual]", "0"}], " ", "&&", 
+               RowBox[{"yMouse", " ", "\[LessEqual]", "dimPianoY"}]}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{"moving", ",", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"legoPositions", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"movingLego", ",", "1"}], "]"}], "]"}], "=", " ", 
+                  
+                  RowBox[{"Floor", "[", "xMouse", "]"}]}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"legoPositions", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"movingLego", ",", "2"}], "]"}], "]"}], "=", " ", 
+                  
+                  RowBox[{"Floor", "[", "yMouse", "]"}]}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"obj", " ", "=", " ", 
+                  RowBox[{"getRectangles", "[", 
+                   RowBox[{"legoPositions", ",", "legos"}], "]"}]}], ";"}]}], 
+               "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}],
+            "\[IndentingNewLine]", ")"}]}]}], "\[IndentingNewLine]", "}"}], 
+       ",", 
+       RowBox[{"PassEventsDown", "\[Rule]", "True"}]}], "\[IndentingNewLine]",
+       "]"}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"800", ",", "600"}], "}"}], ",", 
+   RowBox[{"Alignment", "\[Rule]", "Center"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwdzG1IEwEAxvGbgox54WUQvcxV9EKksWxqWazctYryqNFWLpN0qzGJuVmZ
+K4syCb8kMc3NPozIqFGUmNLMbEGwVRMXQ7sIK2+2avmyjEaFHaLtuQ8PP/5f
+nhVG2wFTCkEQ8uRgtZ+XFTonVQmFLxtSkqsMlPjU++Fm0zUt/OBX6GBt9uky
+KHKWGGAwbDDDeqquCrIRgx1eqN5WDzUHA1fgGV+NC3acuOmG4Vp/O8xSkvdg
+vLyrE+5y0V5IT+7tgTxbOgjzgt9ZeCd3+CMc+tLNwSLreBQ6iJ8xyP2eiMPj
+59p+QRnXNCP0o+JZuMYynboF/WY2DQ50aNNhVr+bhJXWNgoelXZnwj8NitWQ
+3jiyFgbI/gJYtIgVbFp25BDM1G/Qw9DjpyeFn4jqLIw+7L0O52uDrbDiXfNd
++ImlPDDla94DqKGILvjDOPccqntEQWiRLwzBJXWbBJnX3iHITqWx0NViGoaS
+lnWf4djYvKVbk+ZYpwRbvYkdUFNSsxsOysUM3P4ywwUHYrRYlXTV4luCOtEI
+CfPJf4Jm6crl8HwunwPdHmM+LFbGC+CEmVNBPp1RQ71tVAcNdGMpLJNdKofk
+ApkJKntvW6BNmjgFm3f+tcOZ93sa4JOKG41CH+t0wMoq3gMjXOp96LjMBuD4
+3MVXcD1vD0Gx81kYHubYt7CvjxmFL6YzvsF90cIY/A9LtnmP
+  "]],
+
+Cell[BoxData[
+ FormBox[
+  PaneBox[
+   DynamicModuleBox[{}, 
+    TagBox[
+     GraphicsBox[
+      DynamicBox[Typeset`ToBoxes[$CellContext`obj, TraditionalForm, Graphics],
+       
+       ImageSizeCache->{{39.39999999999999, 
+        400.4999999999999}, {-83.95000000000005, 237.34999999999997`}}],
+      Background->GrayLevel[1],
+      GridLines->{{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 
+        17, 18, 19, 20}, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}},
+      ImageSize->800,
+      PlotRange->{{0, 20}, {0, 12}}],
+     EventHandlerTag[{
+      "MouseDown" :> ($CellContext`initMousePos = 
+         MousePosition["Graphics"]; $CellContext`xMouse = 
+         Part[$CellContext`initMousePos, 1]; $CellContext`yMouse = 
+         Part[$CellContext`initMousePos, 2]; 
+        For[$CellContext`i = 1, $CellContext`i <= $CellContext`nLegos, 
+          Increment[$CellContext`i], 
+          If[
+           
+           And[$CellContext`xMouse >= 
+            Part[$CellContext`legoPositions, $CellContext`i, 
+              1], $CellContext`xMouse <= 
+            Part[$CellContext`legos, $CellContext`i, 1] + 
+             Part[$CellContext`legoPositions, $CellContext`i, 
+               1], $CellContext`yMouse >= 
+            Part[$CellContext`legoPositions, $CellContext`i, 
+              2], $CellContext`yMouse <= 
+            Part[$CellContext`legos, $CellContext`i, 2] + 
+             Part[$CellContext`legoPositions, $CellContext`i, 
+               2]], $CellContext`moving = 
+            True; $CellContext`movingLego = $CellContext`i]]), 
+       "MouseUp" :> ($CellContext`moving = 
+         False; $CellContext`movingLego = -1; Null), 
+       "MouseDragged" :> ($CellContext`initMousePos = 
+         MousePosition["Graphics"]; $CellContext`xMouse = 
+         Part[$CellContext`initMousePos, 1]; $CellContext`yMouse = 
+         Part[$CellContext`initMousePos, 2]; If[
+          
+          And[$CellContext`xMouse >= 
+           0, $CellContext`xMouse <= $CellContext`dimPianoX, \
+$CellContext`yMouse >= 0, $CellContext`yMouse <= $CellContext`dimPianoY], 
+          
+          If[$CellContext`moving, 
+           Part[$CellContext`legoPositions, $CellContext`movingLego, 1] = 
+            Floor[$CellContext`xMouse]; 
+           Part[$CellContext`legoPositions, $CellContext`movingLego, 2] = 
+            Floor[$CellContext`yMouse]; $CellContext`obj = \
+$CellContext`getRectangles[$CellContext`legoPositions, $CellContext`legos]; 
+           Null]]), PassEventsDown -> True, Method -> "Preemptive", 
+       PassEventsUp -> True}]],
+    DynamicModuleValues:>{}],
+   Alignment->Center,
+   ImageSize->{800, 600}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.702131617963316*^9, {3.70213165419132*^9, 3.7021316663633623`*^9}, {
+   3.7021316999961557`*^9, 3.702131732791369*^9}, {3.7021317705815277`*^9, 
+   3.702131778030807*^9}, {3.702131821358222*^9, 3.702131848492494*^9}, {
+   3.702132028805045*^9, 3.7021320423506727`*^9}, {3.702132338150413*^9, 
+   3.702132351473236*^9}, {3.7021324729566393`*^9, 3.70213248451186*^9}, {
+   3.702132526423588*^9, 3.7021325317065477`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1920, 1009},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 15741, 377, 1943, "Input"],
+Cell[16324, 401, 3101, 64, 617, "Output"]
+}, Open  ]]
+}
+]
+*)
+

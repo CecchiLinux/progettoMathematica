@@ -1,0 +1,1305 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     56375,       1297]
+NotebookOptionsPosition[     52046,       1155]
+NotebookOutlinePosition[     53626,       1210]
+CellTagsIndexPosition[     53419,       1201]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Progetto mathematica", "Title",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.70080507128835*^9, 3.70080508964336*^9}, {
+   3.7008052418754387`*^9, 3.700805242190485*^9}, {3.701512630986001*^9, 
+   3.701512636926105*^9}, {3.7019533738422422`*^9, 3.7019533751846437`*^9}, {
+   3.7019534335862427`*^9, 3.701953434678207*^9}, 3.7019703322528553`*^9, {
+   3.701970446405365*^9, 3.7019704728975887`*^9}}],
+
+Cell["Ragionare con le frazioni", "Subtitle",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.701512653798641*^9, 3.701512661281816*^9}, {
+   3.701513170867659*^9, 3.701513171977325*^9}, 3.701970472897746*^9}],
+
+Cell[BoxData[
+ RowBox[{"\t\t\t\t\t\t", "\[IndentingNewLine]", "\t\t\t\t\t\t ", 
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJztXQn8ZlP5f4gUIsmWZUaF7Mm+NUOW7HsSGTRI9q2SmLFkKzsp24w1RFFk
+N4MWKUuJJJnJkihp1Z7/+Xbu7X/n3Oc5+7n3/fHez+dJ83vvfc7znHPuuec8
+y/dZfI8Dt91rZiI69E3qf7bd/VPrHXLI7kds91b1jx0OOHSfvQ/Yc/wmBxy2
+5957HrLGHm9Qf/yhouVmIppF/ffVV18d0pAGjtSlZijtouiXih5RdJmiQxSt
+jd/6lm9IQxrSkEDqWkXRd/E5FehxRQcpemvfsg5pSEN6fZK65ld0oaJ/W9aq
+Jr2i6POK3ty37EMa0pBeH4R9EtYcRfMoWlPRroqOVXSTon96rFtPKFqnbz2G
+NKQhtUldqys6XdHR1bu9St8yBco/m6L1FZ2gaLKisZZ7F4BlVtFPHGsW9mRn
+Kpq9b/2GNKQhaVLXu4T39UlFxyhaom8ZLbK/UdFhin6v6E+V/XyWgOe3V/S8
+x15rdN+6DmlIPqSuxRStpmhDRUv3LU+CHrMr2riyz9xf2Zgfr/6/64yEc9R7
++tbB0Gebak3FP36jaOVIPjg7nq/oPxb94VNcvG+dhzQkjkj7vj+o6LbGnL1P
+0Up9yxahy8qKLlf0d8v7eI+iZxxr1j+r89E8PevzTkVTGnI9p2iZDHzfr+hn
+Fv2fRtt9j+eQhlRTtU7trugxZq5i7Xq4oocUXaXoY4oW7VtuQZctFd3tWIPw
+fm5d3f9ujzUL9JKirXrSaVS116ll+UXOfQ9p+/z9Ft3RP+/qe2yHNCR1Lajo
+Fo/3laOfKjpL0QcGQI9lGvuPV6q91Ser9Wup6nfsHWG7mcV4FmvWUx76wha9
+f8d6LVKtT7UM/1C0fIF25iJ7rNajimbte5yH9Pol7BdI20Bi1iqTbsC71YMO
+cyg6uXqP6/PruyP4wNcGu/VvPXQ9lTqIDScdR2We1SYWbG9Osu9ND+95vuIc
+MLeiN/Upx5B6GfuTjbn4LGn78nWKrlH0DUXTA9cs+KoOVDRzRzqsaOyLTjf3
+ThE8sc+4xEPXCzvQ7xqjzUdK73FI+ye+bxnfTr5JlRzYD59C+qyK78i/GrK8
+oOgHpGNR3tiFTEPqh9R1ojEH17TcC9vGdoqub+xhXIR5tEJhHXZQ9JdGm1dl
+5n8k2X1noC0L6rcB095qHc2P5Un2nV5TuO13V9+d3wd8J/fqol+G1D2pa6Ix
+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
+sq3DVuWV36CutYi308J26IN3g/5/XpAD82ngMDxJx4Gb9XSb9EtF7+hbzgB9
+lrfocpAnjw0D14rm+p4ltou0Tdg2LiblwFWWcAWddjqSz0g14ewxq/GM2c94
+R6LqCJCOrWzyctpxiLdheflS1PVpQc87PJ61xbUdEKj3FQIfr3Wf7LaTJLzH
+ag6vS9pGlw0fU12Lkd1u+hB5+nr6JnUdYtHDy99LcuyWDwFjIEv9E9LfYS7f
+jaMtMrTH1YTxiiFW17tIti3UdJrxjLmHvTVB9uZ7y8YxMM+czMi4tWd7yBvm
+8r9x/hXzgknHUki+6+CzMOm4e87+DzunM8eaNOYGlyNR6+IdI2HMhRuoXav4
+herdsuZteLZh8xeCgNWfLd+/FJEcd/VLz+ex35T2yL50Q86+Io3rbMuPhrzR
+uXtVG6ifxNWE8I49VdcRHn2zbaOfnzF+i81vRp5A01/2Q8/nNmHkOzWgXbOu
+YE1s7WHSNqvfCs9Mo/i95dUCz/0SnweF4oWgvorru4V5hljnpHqrGCtHO8fn
+eP9KEdnr4Xj5monPVXiymmvLVv0s5XM1aUJm3d5LMnbWKRn4j2P4whbgvQ6S
+tr3/xNEv2Mfj+2vi4GHPEfXdpfa31su3TbwNyxunhPjariC2RgbJZzfsQ1ZP
+GLvlid+zYT/jxC4mjSNjq8Pt5VNX1y4GH/g8lqvGmsPxwfxaMUFvnD9cdt6d
+cr6HOYlmzHM1yddncjzz7HjjHqxbDzj66T++bQbo91ZhXgXv2RneUxi+bI0n
+B5+1hXenSeg7s0Z7dG1XdV1l8PKOdySdo2nK571uEm8Da8lAOmZK6pfDM4zf
+1wTe1niSxvNnWcYLZxbrd4u0nco8V27X+B17YA6LGd+v6NoR6lqY7PmFOJes
+ltq/uYl0vPdfBJmR3+obk8L5iJdg7gMmkoTLURP8lNlyq4nHEk2u4UzaHmq+
+S/C1RdnhiK9fbtJzxr8/GdnWHMa4W+MYmOc5G9a4gOel2OTzjfvuFu672Xdu
+OuRYSeCPcXT6jUnbxs0xadIhlmcRg/Nz4/7Jwr3cfgBrylYJum9A9v0hfLmd
+1O8LkJmrY16TV/4taexP89kXLfdjzZrieC9z2t+5b+heGfieyPBNwUfAPtCV
+Z2dSLJaBGUN0VeDz3HpzRSAPLjYB+4Y3V79vaXmPkmJQDDmk/AivenEk53OD
+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
+8nk=
+     "], {{0, 204}, {300, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag[
+    "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
+     Association["Comments" -> Association["Software" -> "www.inkscape.org"]]],
+    Selectable->False],
+   DefaultBaseStyle->"ImageGraphics",
+   ImageSize->{335., Automatic},
+   ImageSizeRaw->{300, 204},
+   PlotRange->{{0, 300}, {0, 204}}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.70151414587039*^9, 3.701514166035125*^9}, 
+   3.7019704728979*^9}],
+
+Cell["\<\
+Sara
+Francesca
+Enrico\[LineSeparator]Enrico\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.701512671304908*^9, 3.701512722500846*^9}, 
+   3.701970472897966*^9},
+ FontFamily->"Nimbus Sans L",
+ FontSize->20],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox[
+     StyleBox["\[FirstPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageFirst"]}],
+     ButtonNote->"First Slide"], 
+    ButtonBox[
+     StyleBox["\[LeftPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPagePrevious"]}],
+     ButtonNote->"Previous Slide"], 
+    ButtonBox[
+     StyleBox["\[RightPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageNext"]}],
+     ButtonNote->"Next Slide"], 
+    ButtonBox[
+     StyleBox["\[LastPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageLast"]}]]}
+  },
+  GridBoxItemSize->{"Columns" -> {{
+       Scaled[0.05]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+    "RowsIndexed" -> {}},
+  GridBoxSpacings->{"Columns" -> {
+      Offset[0.27999999999999997`], {
+       Offset[0.]}, 
+      Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+      Offset[0.2], {
+       Offset[0.4]}, 
+      Offset[0.2]}, "RowsIndexed" -> {}}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.701970472898055*^9},
+ TextAlignment->Right]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Indice", "Section",
+ CellChangeTimes->{{3.701516762434713*^9, 3.701516777730097*^9}, {
+  3.70195342005092*^9, 3.701953422676906*^9}, {3.701970478798924*^9, 
+  3.701970482804785*^9}},
+ CellTags->"Indice"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Introduzione",
+ BaseStyle->"Hyperlink",
+ ButtonData->"Introduzione"]], "Item",
+ CellChangeTimes->{{3.701516781683875*^9, 3.701516824890665*^9}, {
+  3.701516971411889*^9, 3.701516971412232*^9}},
+ FontFamily->"Nimbus Sans L",
+ FontSize->20,
+ CellTags->"Indice"],
+
+Cell[TextData[ButtonBox["Come utilizzare il foglio",
+ BaseStyle->"Hyperlink",
+ ButtonData->"ComeUtilizzareIlFoglio"]], "Item",
+ CellChangeTimes->{{3.701516781683875*^9, 3.701516828430491*^9}, {
+  3.701517020257956*^9, 3.701517020258278*^9}},
+ FontFamily->"Nimbus Sans L",
+ FontSize->20,
+ CellTags->"Indice"],
+
+Cell["Software", "Item",
+ CellChangeTimes->{{3.701516781683875*^9, 3.701516831855665*^9}, {
+  3.701517050260067*^9, 3.7015170504880133`*^9}},
+ FontFamily->"Nimbus Sans L",
+ FontSize->20,
+ CellTags->"Indice"],
+
+Cell[TextData[ButtonBox["Reference",
+ BaseStyle->"Hyperlink",
+ ButtonData->"Reference"]], "Item",
+ CellChangeTimes->{{3.701516781683875*^9, 3.701516832305348*^9}, {
+  3.701517040140873*^9, 3.701517047598878*^9}, {3.701517309084578*^9, 
+  3.701517309085013*^9}},
+ FontFamily->"Nimbus Sans L",
+ FontSize->20,
+ CellTags->"Indice"],
+
+Cell[TextData[ButtonBox["Sviluppi futuri",
+ BaseStyle->"Hyperlink",
+ ButtonData->"SviluppiFuturi"]], "Item",
+ CellChangeTimes->{{3.701516781683875*^9, 3.701516832305348*^9}, {
+  3.701517052255249*^9, 3.7015170528288097`*^9}, {3.701517320145535*^9, 
+  3.701517320147519*^9}},
+ FontFamily->"Nimbus Sans L",
+ FontSize->20,
+ CellTags->"Indice"]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox[
+     StyleBox["\[FirstPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageFirst"]}],
+     ButtonNote->"First Slide"], 
+    ButtonBox[
+     StyleBox["\[LeftPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPagePrevious"]}],
+     ButtonNote->"Previous Slide"], 
+    ButtonBox[
+     StyleBox["\[RightPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageNext"]}],
+     ButtonNote->"Next Slide"], 
+    ButtonBox[
+     StyleBox["\[LastPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageLast"]}]]}
+  },
+  GridBoxItemSize->{"Columns" -> {{
+       Scaled[0.05]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+    "RowsIndexed" -> {}},
+  GridBoxSpacings->{"Columns" -> {
+      Offset[0.27999999999999997`], {
+       Offset[0.]}, 
+      Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+      Offset[0.2], {
+       Offset[0.4]}, 
+      Offset[0.2]}, "RowsIndexed" -> {}}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.701970472898055*^9},
+ TextAlignment->Right]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Introduzione", "Section",
+ CellChangeTimes->{{3.700805331645356*^9, 3.700805349342648*^9}},
+ CellTags->"Introduzione"],
+
+Cell["\<\
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in laoreet \
+ante. Vivamus pretium placerat nibh efficitur elementum. Ut ac felis lobortis \
+felis vestibulum laoreet a ac ipsum. Aenean dictum, est a laoreet volutpat, \
+arcu nulla condimentum mi, nec porttitor mauris mi posuere metus. Fusce a \
+sapien risus. Sed at elit venenatis, ultrices purus sit amet, aliquam risus. \
+Nulla condimentum orci vel feugiat lobortis. Nulla tempor nisi eu ligula \
+euismod elementum. Quisque vel sollicitudin odio. Nulla faucibus sed metus \
+convallis malesuada. Pellentesque vel eros ut odio luctus imperdiet.
+\
+\>", "Text",
+ CellChangeTimes->{{3.700805363197259*^9, 3.700805365947147*^9}, {
+   3.701512753816004*^9, 3.7015127662733297`*^9}, {3.701512837835555*^9, 
+   3.701512841362596*^9}, 3.701512982266242*^9, {3.701517095658497*^9, 
+   3.7015171215049467`*^9}, {3.701517259471648*^9, 3.701517260593161*^9}},
+ CellTags->"Introduzione"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ ButtonBox[
+  RowBox[{"vai", " ", 
+   RowBox[{"all", "'"}], "indice"}],
+  BaseStyle->"Hyperlink",
+  ButtonData->"Indice"]], "Subsection",
+ CellChangeTimes->{{3.701517263806714*^9, 3.7015172684902773`*^9}, 
+   3.701517830880631*^9},
+ TextAlignment->Right],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox[
+     StyleBox["\[FirstPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageFirst"]}],
+     ButtonNote->"First Slide"], 
+    ButtonBox[
+     StyleBox["\[LeftPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPagePrevious"]}],
+     ButtonNote->"Previous Slide"], 
+    ButtonBox[
+     StyleBox["\[RightPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageNext"]}],
+     ButtonNote->"Next Slide"], 
+    ButtonBox[
+     StyleBox["\[LastPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageLast"]}]]}
+  },
+  GridBoxItemSize->{"Columns" -> {{
+       Scaled[0.05]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+    "RowsIndexed" -> {}},
+  GridBoxSpacings->{"Columns" -> {
+      Offset[0.27999999999999997`], {
+       Offset[0.]}, 
+      Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+      Offset[0.2], {
+       Offset[0.4]}, 
+      Offset[0.2]}, "RowsIndexed" -> {}}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.701970472898055*^9},
+ TextAlignment->Right]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Come utilizzare il foglio", "Section",
+ CellChangeTimes->{{3.7008051814593573`*^9, 3.700805195643248*^9}, {
+  3.7008052616005087`*^9, 3.700805300275428*^9}},
+ CellTags->"ComeUtilizzareIlFoglio"],
+
+Cell["\<\
+Aliquam rhoncus eleifend vestibulum. Etiam nec odio et augue posuere ornare. \
+Aliquam pretium lacinia tempor. Sed vel velit aliquet, pellentesque dui et, \
+convallis nunc. Duis ultrices velit in augue interdum commodo. Morbi non nisi \
+vitae erat auctor vehicula vitae feugiat massa. Nunc efficitur ut lectus \
+tempor vulputate. Phasellus sit amet justo rhoncus purus tempor rhoncus. \
+Fusce faucibus, leo vel dignissim lobortis, libero odio viverra magna, nec \
+dignissim dui ante ut lorem. Aliquam tincidunt dui vel libero hendrerit \
+laoreet. Praesent et sapien scelerisque, egestas odio in, maximus ex. \
+Praesent sodales eget velit blandit efficitur. Aliquam erat volutpat. Sed \
+eget tempor ligula. Nullam libero dui, consequat at turpis vitae, ullamcorper \
+malesuada justo. \
+\>", "Text",
+ CellChangeTimes->{{3.700805226234125*^9, 3.7008052287209578`*^9}, 
+   3.7015128542782784`*^9, 3.701514264247013*^9},
+ CellTags->"ComeUtilizzareIlFoglio"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ ButtonBox[
+  RowBox[{"vai", " ", 
+   RowBox[{"all", "'"}], "indice"}],
+  BaseStyle->"Hyperlink",
+  ButtonData->"Indice"]], "Subsection",
+ CellChangeTimes->{{3.701517263806714*^9, 3.7015172684902773`*^9}, 
+   3.701517830880631*^9},
+ TextAlignment->Right],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox[
+     StyleBox["\[FirstPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageFirst"]}],
+     ButtonNote->"First Slide"], 
+    ButtonBox[
+     StyleBox["\[LeftPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPagePrevious"]}],
+     ButtonNote->"Previous Slide"], 
+    ButtonBox[
+     StyleBox["\[RightPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageNext"]}],
+     ButtonNote->"Next Slide"], 
+    ButtonBox[
+     StyleBox["\[LastPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageLast"]}]]}
+  },
+  GridBoxItemSize->{"Columns" -> {{
+       Scaled[0.05]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+    "RowsIndexed" -> {}},
+  GridBoxSpacings->{"Columns" -> {
+      Offset[0.27999999999999997`], {
+       Offset[0.]}, 
+      Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+      Offset[0.2], {
+       Offset[0.4]}, 
+      Offset[0.2]}, "RowsIndexed" -> {}}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.701970472898055*^9},
+ TextAlignment->Right]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Software", "Section",
+ CellChangeTimes->{{3.7008054064583063`*^9, 3.700805412284555*^9}, {
+  3.7008055079848957`*^9, 3.700805508338653*^9}, {3.701512869902443*^9, 
+  3.7015128770749083`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Pane", "[", 
+     RowBox[{
+      RowBox[{"Text", "[", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"With", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"i", "=", "i"}], ",", 
+                RowBox[{"j", "=", "j"}]}], "}"}], ",", 
+              RowBox[{"HoldForm", "[", 
+               FractionBox[
+                RowBox[{"HoldForm", "[", "i", "]"}], 
+                RowBox[{"HoldForm", "[", "j", "]"}]], "]"}]}], "]"}], ",", 
+            "\"\< = \>\"", ",", 
+            RowBox[{"i", "/", "j"}]}], "}"}], "]"}], ",", "100"}], "]"}], 
+       "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"500", ",", "250"}], "}"}], ",", 
+      RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "\"\<numerator\>\""}], "}"}], ",", "1", 
+      ",", "100", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"j", ",", "10", ",", "\"\<denominator\>\""}], "}"}], ",", "1", 
+      ",", "100", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], "]"}], 
+  "\n"}], "\n", 
+ RowBox[{"AutoCollapse", "[", "]"}]}], "Code",
+ CellChangeTimes->{{3.7008055183165083`*^9, 3.700805519243347*^9}, {
+  3.7008056510258017`*^9, 3.700805666351962*^9}, {3.700805711725267*^9, 
+  3.70080571172584*^9}, {3.701514569157299*^9, 3.7015145701828737`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`i$$ = 1, $CellContext`j$$ = 10, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`i$$], 1, "numerator"}, 1, 100, 1}, {{
+         Hold[$CellContext`j$$], 10, "denominator"}, 1, 100, 1}}, 
+      Typeset`size$$ = {500., {122., 128.}}, Typeset`update$$ = 0, 
+      Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      True, $CellContext`i$35459$$ = 0, $CellContext`j$35460$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, 
+        "Variables" :> {$CellContext`i$$ = 1, $CellContext`j$$ = 10}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`i$$, $CellContext`i$35459$$, 0], 
+          Hold[$CellContext`j$$, $CellContext`j$35460$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Pane[
+          Text[
+           Style[
+            Row[{
+              
+              With[{$CellContext`i = $CellContext`i$$, $CellContext`j = \
+$CellContext`j$$}, 
+               HoldForm[HoldForm[$CellContext`i]/HoldForm[$CellContext`j]]], 
+              " = ", $CellContext`i$$/$CellContext`j$$}], 100]], {500, 250}, 
+          Alignment -> Center], 
+        "Specifications" :> {{{$CellContext`i$$, 1, "numerator"}, 1, 100, 1, 
+           Appearance -> "Labeled"}, {{$CellContext`j$$, 10, "denominator"}, 
+           1, 100, 1, Appearance -> "Labeled"}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{547., {177., 183.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.700805717427435*^9, 3.701513246293828*^9, 
+  3.7015145717073097`*^9, 3.7015146641220913`*^9}]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell["Tips", "Subsection",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.701517724335968*^9, 3.701517746863645*^9}}],
+
+Cell["\<\
+ Quisque vel sollicitudin odio. Nulla faucibus sed metus convallis malesuada. \
+Pellentesque vel eros ut odio luctus imperdiet.\
+\>", "Text",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.701517751635975*^9, 3.701517758222237*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ ButtonBox[
+  RowBox[{"vai", " ", 
+   RowBox[{"all", "'"}], "indice"}],
+  BaseStyle->"Hyperlink",
+  ButtonData->"Indice"]], "Subsection",
+ CellChangeTimes->{{3.701517263806714*^9, 3.7015172684902773`*^9}, 
+   3.701517830880631*^9},
+ TextAlignment->Right],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox[
+     StyleBox["\[FirstPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageFirst"]}],
+     ButtonNote->"First Slide"], 
+    ButtonBox[
+     StyleBox["\[LeftPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPagePrevious"]}],
+     ButtonNote->"Previous Slide"], 
+    ButtonBox[
+     StyleBox["\[RightPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageNext"]}],
+     ButtonNote->"Next Slide"], 
+    ButtonBox[
+     StyleBox["\[LastPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageLast"]}]]}
+  },
+  GridBoxItemSize->{"Columns" -> {{
+       Scaled[0.05]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+    "RowsIndexed" -> {}},
+  GridBoxSpacings->{"Columns" -> {
+      Offset[0.27999999999999997`], {
+       Offset[0.]}, 
+      Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+      Offset[0.2], {
+       Offset[0.4]}, 
+      Offset[0.2]}, "RowsIndexed" -> {}}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.701970472898055*^9},
+ TextAlignment->Right]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reference", "Section",
+ CellChangeTimes->{{3.700805422483704*^9, 3.7008054252008753`*^9}, 
+   3.7008054902907467`*^9, {3.7015174747377653`*^9, 3.701517474936989*^9}},
+ CellTags->"Reference"],
+
+Cell["\<\
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in laoreet \
+ante. Vivamus pretium placerat nibh efficitur elementum. Ut ac felis lobortis \
+felis vestibulum laoreet a ac ipsum. Aenean dictum, est a laoreet volutpat, \
+arcu nulla condimentum mi, nec porttitor mauris mi posuere metus. Fusce a \
+sapien risus. Sed at elit venenatis, ultrices purus sit amet, aliquam risus. \
+Nulla condimentum orci vel feugiat lobortis. Nulla tempor nisi eu ligula \
+euismod elementum. Quisque vel sollicitudin odio. Nulla faucibus sed metus \
+convallis malesuada. Pellentesque vel eros ut odio luctus imperdiet.\
+\>", "Text",
+ CellChangeTimes->{{3.700805431208617*^9, 3.700805436706114*^9}, {
+   3.700805522346027*^9, 3.7008055298162603`*^9}, 3.701512863307763*^9},
+ CellTags->"Reference"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ ButtonBox[
+  RowBox[{"vai", " ", 
+   RowBox[{"all", "'"}], "indice"}],
+  BaseStyle->"Hyperlink",
+  ButtonData->"Indice"]], "Subsection",
+ CellChangeTimes->{{3.701517263806714*^9, 3.7015172684902773`*^9}, 
+   3.701517830880631*^9},
+ TextAlignment->Right],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox[
+     StyleBox["\[FirstPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageFirst"]}],
+     ButtonNote->"First Slide"], 
+    ButtonBox[
+     StyleBox["\[LeftPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPagePrevious"]}],
+     ButtonNote->"Previous Slide"], 
+    ButtonBox[
+     StyleBox["\[RightPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageNext"]}],
+     ButtonNote->"Next Slide"], 
+    ButtonBox[
+     StyleBox["\[LastPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageLast"]}]]}
+  },
+  GridBoxItemSize->{"Columns" -> {{
+       Scaled[0.05]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+    "RowsIndexed" -> {}},
+  GridBoxSpacings->{"Columns" -> {
+      Offset[0.27999999999999997`], {
+       Offset[0.]}, 
+      Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+      Offset[0.2], {
+       Offset[0.4]}, 
+      Offset[0.2]}, "RowsIndexed" -> {}}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.701970472898055*^9},
+ TextAlignment->Right]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sviluppi futuri", "Section",
+ CellChangeTimes->{{3.700805431208617*^9, 3.700805436706114*^9}, {
+  3.7015174770149918`*^9, 3.701517477177616*^9}},
+ CellTags->"SviluppiFuturi"],
+
+Cell["\<\
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in laoreet \
+ante. Vivamus pretium placerat nibh efficitur elementum. Ut ac felis lobortis \
+felis vestibulum laoreet a ac ipsum. Aenean dictum, est a laoreet volutpat, \
+arcu nulla condimentum mi, nec porttitor mauris mi posuere metus. Fusce a \
+sapien risus. Sed at elit venenatis, ultrices purus sit amet, aliquam risus. \
+Nulla condimentum orci vel feugiat lobortis. Nulla tempor nisi eu ligula \
+euismod elementum. Quisque vel sollicitudin odio. Nulla faucibus sed metus \
+convallis malesuada. Pellentesque vel eros ut odio luctus imperdiet.\
+\>", "Text",
+ CellChangeTimes->{{3.700805431208617*^9, 3.700805436706114*^9}, {
+   3.700805569041534*^9, 3.700805577617106*^9}, 3.7015128653941193`*^9},
+ CellTags->"SviluppiFuturi"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ ButtonBox[
+  RowBox[{"vai", " ", 
+   RowBox[{"all", "'"}], "indice"}],
+  BaseStyle->"Hyperlink",
+  ButtonData->"Indice"]], "Subsection",
+ CellChangeTimes->{{3.701517263806714*^9, 3.7015172684902773`*^9}, 
+   3.701517830880631*^9},
+ TextAlignment->Right],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox[
+     StyleBox["\[FirstPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageFirst"]}],
+     ButtonNote->"First Slide"], 
+    ButtonBox[
+     StyleBox["\[LeftPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPagePrevious"]}],
+     ButtonNote->"Previous Slide"], 
+    ButtonBox[
+     StyleBox["\[RightPointer]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageNext"]}],
+     ButtonNote->"Next Slide"], 
+    ButtonBox[
+     StyleBox["\[LastPage]", "SR"],
+     BaseStyle->"SlideHyperlink",
+     ButtonFunction:>FrontEndExecute[{
+        FrontEndToken[
+         FrontEnd`SelectedNotebook[], "ScrollPageLast"]}]]}
+  },
+  GridBoxItemSize->{"Columns" -> {{
+       Scaled[0.05]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+    "RowsIndexed" -> {}},
+  GridBoxSpacings->{"Columns" -> {
+      Offset[0.27999999999999997`], {
+       Offset[0.]}, 
+      Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+      Offset[0.2], {
+       Offset[0.4]}, 
+      Offset[0.2]}, "RowsIndexed" -> {}}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{3.701970472898055*^9},
+ TextAlignment->Right]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{960, 1009},
+WindowMargins->{{-613, Automatic}, {-76, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Indice"->{
+  Cell[30591, 552, 209, 4, 65, "Section",
+   CellTags->"Indice"],
+  Cell[30825, 560, 284, 7, 39, "Item",
+   CellTags->"Indice"],
+  Cell[31112, 569, 307, 7, 39, "Item",
+   CellTags->"Indice"],
+  Cell[31422, 578, 207, 5, 39, "Item",
+   CellTags->"Indice"],
+  Cell[31632, 585, 327, 8, 39, "Item",
+   CellTags->"Indice"],
+  Cell[31962, 595, 340, 8, 39, "Item",
+   CellTags->"Indice"]},
+ "Introduzione"->{
+  Cell[33839, 653, 124, 2, 65, "Section",
+   CellTags->"Introduzione"],
+  Cell[33966, 657, 953, 15, 143, "Text",
+   CellTags->"Introduzione"]},
+ "ComeUtilizzareIlFoglio"->{
+  Cell[36749, 734, 200, 3, 65, "Section",
+   CellTags->"ComeUtilizzareIlFoglio"],
+  Cell[36952, 739, 962, 15, 165, "Text",
+   CellTags->"ComeUtilizzareIlFoglio"]},
+ "Reference"->{
+  Cell[46418, 999, 196, 3, 65, "Section",
+   CellTags->"Reference"],
+  Cell[46617, 1004, 801, 12, 121, "Text",
+   CellTags->"Reference"]},
+ "SviluppiFuturi"->{
+  Cell[49248, 1078, 180, 3, 65, "Section",
+   CellTags->"SviluppiFuturi"],
+  Cell[49431, 1083, 806, 12, 121, "Text",
+   CellTags->"SviluppiFuturi"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Indice", 52332, 1165},
+ {"Introduzione", 52733, 1178},
+ {"ComeUtilizzareIlFoglio", 52906, 1183},
+ {"Reference", 53086, 1188},
+ {"SviluppiFuturi", 53246, 1193}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 436, 6, 93, "Title",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[1019, 30, 238, 3, 51, "Subtitle",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[1260, 35, 27544, 457, 276, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[28807, 494, 259, 9, 131, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[29069, 505, 1485, 42, 57, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30591, 552, 209, 4, 65, "Section",
+ CellTags->"Indice"],
+Cell[CellGroupData[{
+Cell[30825, 560, 284, 7, 39, "Item",
+ CellTags->"Indice"],
+Cell[31112, 569, 307, 7, 39, "Item",
+ CellTags->"Indice"],
+Cell[31422, 578, 207, 5, 39, "Item",
+ CellTags->"Indice"],
+Cell[31632, 585, 327, 8, 39, "Item",
+ CellTags->"Indice"],
+Cell[31962, 595, 340, 8, 39, "Item",
+ CellTags->"Indice"]
+}, Open  ]],
+Cell[32317, 606, 1485, 42, 57, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33839, 653, 124, 2, 65, "Section",
+ CellTags->"Introduzione"],
+Cell[33966, 657, 953, 15, 143, "Text",
+ CellTags->"Introduzione"],
+Cell[CellGroupData[{
+Cell[34944, 676, 268, 8, 44, "Subsection"],
+Cell[35215, 686, 1485, 42, 57, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36749, 734, 200, 3, 65, "Section",
+ CellTags->"ComeUtilizzareIlFoglio"],
+Cell[36952, 739, 962, 15, 165, "Text",
+ CellTags->"ComeUtilizzareIlFoglio"],
+Cell[CellGroupData[{
+Cell[37939, 758, 268, 8, 44, "Subsection"],
+Cell[38210, 768, 1485, 42, 57, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39744, 816, 197, 3, 65, "Section"],
+Cell[CellGroupData[{
+Cell[39966, 823, 1742, 46, 173, "Code"],
+Cell[41711, 871, 2471, 51, 377, "Output"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[44216, 927, 116, 2, 45, "Subsection"],
+Cell[44335, 931, 241, 5, 55, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[44613, 941, 268, 8, 36, "Subsection"],
+Cell[44884, 951, 1485, 42, 57, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46418, 999, 196, 3, 65, "Section",
+ CellTags->"Reference"],
+Cell[46617, 1004, 801, 12, 121, "Text",
+ CellTags->"Reference"],
+Cell[CellGroupData[{
+Cell[47443, 1020, 268, 8, 44, "Subsection"],
+Cell[47714, 1030, 1485, 42, 57, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49248, 1078, 180, 3, 65, "Section",
+ CellTags->"SviluppiFuturi"],
+Cell[49431, 1083, 806, 12, 121, "Text",
+ CellTags->"SviluppiFuturi"],
+Cell[CellGroupData[{
+Cell[50262, 1099, 268, 8, 44, "Subsection"],
+Cell[50533, 1109, 1485, 42, 57, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
