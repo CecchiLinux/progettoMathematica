@@ -1,0 +1,132 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4323,        124]
+NotebookOptionsPosition[      3913,        104]
+NotebookOutlinePosition[      4246,        119]
+CellTagsIndexPosition[      4203,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Button", "[", 
+  RowBox[{"\"\<Carica Package\>\"", ",", 
+   RowBox[{
+    RowBox[{"SetDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";", 
+    RowBox[{"<<", "myPackage.m"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6729884611272836`*^9, 3.6729885184578543`*^9}, {
+  3.672988579564252*^9, 3.672988591642253*^9}, {3.702271921700444*^9, 
+  3.7022719331387377`*^9}, {3.702272009161738*^9, 3.7022720105793467`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  ButtonBox["\<\"Carica Package\"\>",
+   Appearance->Automatic,
+   ButtonFunction:>(SetDirectory[
+      NotebookDirectory[]]; Get["myPackage.m"]),
+   Evaluator->Automatic,
+   Method->"Preemptive"], TraditionalForm]], "Output",
+ CellChangeTimes->{3.702272019178186*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"getGame1", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.702273891419332*^9, 3.702273897829486*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  PaneBox[
+   DynamicModuleBox[{}, 
+    TagBox[
+     GraphicsBox[
+      DynamicBox[Typeset`ToBoxes[Private`obj, TraditionalForm, Graphics],
+       ImageSizeCache->{{39.39999999999999, 
+        719.6999999999998}, {-203.65000000000003`, 237.29999999999995`}}],
+      Background->GrayLevel[1],
+      GridLines->{{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 
+        17, 18, 19, 20}, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}},
+      ImageSize->800,
+      PlotRange->{{0, 20}, {0, 12}}],
+     EventHandlerTag[{
+      "MouseDown" :> (Private`initMousePos = MousePosition["Graphics"]; 
+        Private`xMouse = Part[Private`initMousePos, 1]; 
+        Private`yMouse = Part[Private`initMousePos, 2]; 
+        For[Private`i = 1, Private`i <= Private`nLegos, 
+          Increment[Private`i], 
+          If[
+           And[
+           Private`xMouse >= Part[Private`legoPositions, Private`i, 1], 
+            Private`xMouse <= 
+            Part[Private`legos, Private`i, 1] + 
+             Part[Private`legoPositions, Private`i, 1], Private`yMouse >= 
+            Part[Private`legoPositions, Private`i, 2], Private`yMouse <= 
+            Part[Private`legos, Private`i, 2] + 
+             Part[Private`legoPositions, Private`i, 2]], 
+           Private`moving = True; Private`movingLego = Private`i]]), 
+       "MouseUp" :> (Private`moving = False; Private`movingLego = -1; Null), 
+       "MouseDragged" :> (Private`initMousePos = MousePosition["Graphics"]; 
+        Private`xMouse = Part[Private`initMousePos, 1]; 
+        Private`yMouse = Part[Private`initMousePos, 2]; If[
+          And[
+          Private`xMouse >= 0, Private`xMouse <= Private`dimPianoX, 
+           Private`yMouse >= 0, Private`yMouse <= Private`dimPianoY], 
+          If[
+          Private`moving, 
+           Part[Private`legoPositions, Private`movingLego, 1] = 
+            Floor[Private`xMouse]; 
+           Part[Private`legoPositions, Private`movingLego, 2] = 
+            Floor[Private`yMouse]; 
+           Private`obj = 
+            Private`getRectangles[Private`legoPositions, Private`legos]; 
+           Null]]), PassEventsDown -> True, Method -> "Preemptive", 
+       PassEventsUp -> True}]],
+    DynamicModuleValues:>{}],
+   Alignment->Center,
+   ImageSize->{800, 600}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.702273898798149*^9, 3.7022739395167103`*^9, 
+  3.70227404927801*^9}]
+}, Open  ]]
+},
+WindowSize->{960, 1009},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 459, 9, 35, "Input"],
+Cell[1042, 33, 292, 8, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1371, 46, 122, 2, 32, "Input"],
+Cell[1496, 50, 2401, 51, 650, "Output"]
+}, Open  ]]
+}
+]
+*)
+
